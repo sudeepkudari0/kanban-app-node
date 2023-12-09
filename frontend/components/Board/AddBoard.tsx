@@ -37,11 +37,10 @@ function AddBoard() {
       name: newBoardName,
       description: newBoardDescription,
       column: [],
-      _id: "",
     };
 
     axios
-      .post<Board>(`${process.env.NEXT_PUBLIC_API_URL}/boards`, newBoard)
+      .post<Board>(`${process.env.NEXT_PUBLIC_API_URL}/api/boards`, newBoard)
       .then((response) => {
         console.log(response.data);
         // Reset input fields

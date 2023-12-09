@@ -22,7 +22,7 @@ function AddTask() {
   const addTask = async () => {
     try {
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/boards/${id}/tasks`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/boards/${id}/tasks`,
         {
           columnName: columnName,
           taskName: newTaskName,

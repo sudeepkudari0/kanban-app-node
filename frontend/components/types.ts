@@ -20,6 +20,5 @@ export type BoardWithID = {
 export type Board = {
     name: string;
     description: string;
-    column : Column[];
-    _id: string;
+    column : Column[]
   }  

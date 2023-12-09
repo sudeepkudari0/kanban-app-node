@@ -12,8 +12,9 @@ const server = createServer(app);
 app.use(express.json());
 const io = new Server(server);
 const PORT = process.env.PORT || 3001;
+const mongodb = process.env.MONGODB_URI;
 
-mongoose.connect("mongodb+srv://sudeep:sudeep@cluster0.cqfoz4h.mongodb.net/kanban?retryWrites=true&w=majority")
+mongoose.connect(`${mongodb}`)
     .then(() => {
         console.log('Connected to MongoDB');
           })
