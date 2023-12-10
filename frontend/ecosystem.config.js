@@ -10,7 +10,7 @@ module.exports = {
       host : '65.2.78.89',
       ref  : 'origin/main',
       repo : 'git@github.com:sudeepkudari0/kanban-app-node.git',
-      path : '/home/ubuntu/kanban-app-node/frontend',
+      path : '/home/ubuntu',
       'pre-deploy-local': '',
       'post-deploy' : 'source ~/.nvm/nvm.sh && npm install && npm run build && pm2 reload ecosystem.config.js --env production',
       'pre-setup': '',
