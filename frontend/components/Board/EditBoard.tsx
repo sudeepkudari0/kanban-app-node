@@ -65,7 +65,7 @@ function EditBoard(){
     };
 
     axios
-      .put<Board>(`http://13.233.120.132:5000/api/boards/${id}`, updatedBoard)
+      .put<Board>(`${process.env.NEXT_PUBLIC_API_URL}/api/boards/${id}`, updatedBoard)
       .then((response) => {
         console.log(response.data);
         window.location.pathname = "/";
